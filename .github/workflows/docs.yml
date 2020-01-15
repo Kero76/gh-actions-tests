@@ -24,6 +24,7 @@ jobs:
         git config --local user.email "doc.generator3000@github.com"
         git config --local user.name "DocGenerator 3000"
         git status
+        ls
         git commit -m "[Doc] - Update API documentation." -a
     - name: Push changes
       uses: ad-m/github-push-action@master
