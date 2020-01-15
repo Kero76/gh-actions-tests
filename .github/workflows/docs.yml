@@ -23,7 +23,7 @@ jobs:
       run: |
         git config --local user.email "doc.generator3000@github.com"
         git config --local user.name "DocGenerator 3000"
-        git status
+        cd docs
         ls
         git commit -m "[Doc] - Update API documentation." -a
     - name: Push changes
@@ -31,4 +31,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: 'gh-pages'
-        directory: 'docs'
