@@ -1,0 +1,39 @@
+{
+  "name": "@kero76/gh-actions-tests",
+  "version": "0.1.0",
+  "description": "A repository to test powerful of Github Actions",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register ./tests/**/*.ts",
+    "coverage": "nyc npm run test",
+    "lint": "eslint src/**/*.ts tests/**/*.ts",
+    "build": "tsc",
+    "docs": "npx typedoc --out docs src --mode file --module commonjs"
+  },
+  "keywords": [
+    "github-workflows",
+    "github-actions"
+  ],
+  "author": "Nicolas GILLE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kero76/gh-actions-tests/issues"
+  },
+  "homepage": "https://github.com/Kero76/gh-actions-tests#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^7.0.0",
+    "nyc": "^15.0.0",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.4",
+    "typescript": "^3.7.4"
+  }
+}
