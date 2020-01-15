@@ -23,9 +23,7 @@ jobs:
       run: |
         git config --local user.email "doc.generator3000@github.com"
         git config --local user.name "DocGenerator 3000"
-        git branch
-        git add docs/
-        git commit -m "[Doc] - Update API documentation." 
+        git commit -m "[Doc] - Update API documentation." -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
