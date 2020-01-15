@@ -1,0 +1,6 @@
+# Libs get from npm.
+node_modules
+built
+.nyc_output
+coverage
+docs

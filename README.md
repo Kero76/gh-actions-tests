@@ -1,2 +1,3 @@
-# gh-actions-tests
-A repository to test powerfull of Github Actions 
+# Github Actions Tests
+
+A repository to test powerful of Github Actions and Workflow.
