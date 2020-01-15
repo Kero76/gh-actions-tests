@@ -26,4 +26,17 @@ export default class MyClass1 {
     getRandomBoolean(): boolean {
         return Math.random() >= 0.5;
     }
+
+    /**
+     * Say hello !
+     *
+     * @param name {string}
+     *  The name of the person to say hello, or "world" if is empty.
+     * @returns {string}
+     *  Return "Hello [name|'World'];
+     *
+     * @since 0.2.0
+     * @version 1.0
+     */
+    sayHello(name: string): string { return 'Hello ' + (name.length === 0) ? 'World' : name; }
 }
