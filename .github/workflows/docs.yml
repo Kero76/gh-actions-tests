@@ -21,8 +21,8 @@ jobs:
         npm run docs
     - name: Commit files
       run: |
-        git config --local user.email "doc.generator3000@github.com"
-        git config --local user.name "DocGenerator 3000"
+        git config --local user.email "nic.gille@gmail.com"
+        git config --local user.name "Kero76"
         git add docs/
         git commit -m "[Doc] - Update API documentation." 
     - name: Push changes
