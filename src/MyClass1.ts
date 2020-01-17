@@ -39,4 +39,17 @@ export default class MyClass1 {
      * @version 1.0
      */
     sayHello(name: string): string { return 'Hello ' + (name.length === 0) ? 'World' : name; }
+
+    /**
+     * Say goodbye !
+     * 
+     * @param name {string}
+     *  The name of the person to say goodbye, or "world" if is empty.
+     * @returns {string}
+     *  Return Goodbye [name|'World']
+     * 
+     * @since 0.3.0
+     * @version 1.0
+     */
+    SayGoodbye(name: string): string { return 'Goodbye ' + (name.length === 0) ? 'World' : name; }
 }
