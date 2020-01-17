@@ -38,7 +38,7 @@ export default class MyClass1 {
      * @since 0.2.0
      * @version 1.0
      */
-    sayHello(name: string): string { return 'Hello ' + (name.length === 0) ? 'World' : name; }
+    sayHello(name: string = ""): string { return 'Hello '.concat((name.length === 0) ? 'World' : name); }
 
     /**
      * Say goodbye !
@@ -51,5 +51,5 @@ export default class MyClass1 {
      * @since 0.3.0
      * @version 1.0
      */
-    SayGoodbye(name: string): string { return 'Goodbye ' + (name.length === 0) ? 'World' : name; }
+    sayGoodbye(name: string = ""): string { return 'Goodbye '.concat((name.length === 0) ? 'World' : name); }
 }
