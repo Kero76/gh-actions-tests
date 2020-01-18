@@ -23,6 +23,7 @@ jobs:
       run: |
         git config --local user.email "doc.generator3000@github.com"
         git config --local user.name "DocGenerator 3000"
+        git checkout gh-pages
         mv docs/*.html docs/classes/ docs/assets/ ./
         ls -lah
         git add .
