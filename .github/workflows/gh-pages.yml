@@ -23,18 +23,12 @@ jobs:
       run: |
         git config --local user.email "doc.generator3000@github.com"
         git config --local user.name "DocGenerator 3000"
-        git stash
-        git log --graph --all --oneline --decorate
-        git checkout gh-pages
-        git log --graph --all --oneline --decorate
-        ls -lah 
-        rm -rf node_modules
-        git stash pop
+        git config receive.denyNonFastForwards false
         mv docs/*.html docs/classes/ docs/assets/ ./
         git add .
         git commit -m "[Doc] - Update API documentation." 
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: "gh-pages"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: "gh-pages"
