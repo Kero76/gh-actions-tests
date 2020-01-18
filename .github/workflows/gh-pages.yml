@@ -26,9 +26,11 @@ jobs:
         mv docs/*.html docs/classes/ docs/assets/ ./
         ls -lah
         git add .
+        git status
+        git log --graph --all --oneline --decorate
         git commit -m "[Doc] - Update API documentation." 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: "gh-pages"
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: "gh-pages"
