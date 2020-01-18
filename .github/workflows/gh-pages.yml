@@ -23,7 +23,7 @@ jobs:
       run: |
         git config --local user.email "doc.generator3000@github.com"
         git config --local user.name "DocGenerator 3000"
-        cd docs
+        mv docs/*.html docs/classes/ docs/assets/ ./
         git add .
         git commit -m "[Doc] - Update API documentation." 
     - name: Push changes
