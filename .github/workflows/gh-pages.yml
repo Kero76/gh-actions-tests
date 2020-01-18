@@ -24,12 +24,13 @@ jobs:
         git config --local user.email "doc.generator3000@github.com"
         git config --local user.name "DocGenerator 3000"
         git stash
+        git log --graph --all --oneline --decorate
         git checkout gh-pages
+        git log --graph --all --oneline --decorate
         ls -lah 
+        rm -rf node_modules
         git stash pop
         mv docs/*.html docs/classes/ docs/assets/ ./
-        git status
-        git log --graph --all --oneline --decorate
         git add .
         git commit -m "[Doc] - Update API documentation." 
     # - name: Push changes
