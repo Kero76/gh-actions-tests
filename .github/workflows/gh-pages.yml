@@ -25,12 +25,12 @@ jobs:
         git config --local user.name "DocGenerator 3000"
         git stash
         git checkout gh-pages
+        rm -rf .
         git stash pop
         mv docs/*.html docs/classes/ docs/assets/ ./
-        ls -lah
-        git add .
         git status
         git log --graph --all --oneline --decorate
+        git add .
         git commit -m "[Doc] - Update API documentation." 
     # - name: Push changes
     #   uses: ad-m/github-push-action@master
