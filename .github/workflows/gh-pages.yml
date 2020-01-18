@@ -25,7 +25,6 @@ jobs:
         git config --local user.name "DocGenerator 3000"
         mv docs/*.html docs/classes/ docs/assets/ ./
         ls -lah
-    #     git rm -rf .github/ docs/ node_modules/ src/ tests/ .eslintignore *.json .nycrc .prettierignore
         git add .
         git commit -m "[Doc] - Update API documentation." 
     - name: Push changes
